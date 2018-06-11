@@ -1,0 +1,6 @@
+framework module Pods_ChoresForCoinsProject {
+  umbrella header "Pods-ChoresForCoinsProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
