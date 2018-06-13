@@ -13,6 +13,9 @@
 		65E574F020CED77200C23098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65E574EF20CED77200C23098 /* Assets.xcassets */; };
 		65E574F320CED77200C23098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E574F120CED77200C23098 /* LaunchScreen.storyboard */; };
 		65E574FB20CED7BA00C23098 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65E574FA20CED7BA00C23098 /* GoogleService-Info.plist */; };
+		65E5750120D08AD600C23098 /* AppDelegate+GoogleSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E5750020D08AD600C23098 /* AppDelegate+GoogleSignIn.swift */; };
+		65E5750520D08CCA00C23098 /* MyFirebaseClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E5750420D08CCA00C23098 /* MyFirebaseClass.swift */; };
+		65E5750720D0AFB600C23098 /* ProtectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E5750620D0AFB600C23098 /* ProtectedViewController.swift */; };
 		D768599ED290F2E3799B0698 /* Pods_ChoresForCoinsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E49A3F9FDAF23B59A6A871 /* Pods_ChoresForCoinsProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +29,9 @@
 		65E574F220CED77200C23098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65E574F420CED77200C23098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65E574FA20CED7BA00C23098 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65E5750020D08AD600C23098 /* AppDelegate+GoogleSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+GoogleSignIn.swift"; sourceTree = "<group>"; };
+		65E5750420D08CCA00C23098 /* MyFirebaseClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirebaseClass.swift; sourceTree = "<group>"; };
+		65E5750620D0AFB600C23098 /* ProtectedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedViewController.swift; sourceTree = "<group>"; };
 		B037D316BF9655875B3F1AA1 /* Pods-ChoresForCoinsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoresForCoinsProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject.release.xcconfig"; sourceTree = "<group>"; };
 		DD27596F3D33D7CFD6FEA2CE /* Pods-ChoresForCoinsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChoresForCoinsProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,14 +87,41 @@
 			isa = PBXGroup;
 			children = (
 				65E574E820CED77000C23098 /* AppDelegate.swift */,
-				65E574EA20CED77000C23098 /* ViewController.swift */,
 				65E574EC20CED77000C23098 /* Main.storyboard */,
 				65E574EF20CED77200C23098 /* Assets.xcassets */,
 				65E574F120CED77200C23098 /* LaunchScreen.storyboard */,
 				65E574F420CED77200C23098 /* Info.plist */,
 				65E574FA20CED7BA00C23098 /* GoogleService-Info.plist */,
+				65E574FF20D0881400C23098 /* Modals */,
+				65E574FE20D0880700C23098 /* Extensions */,
+				65E574FC20D087E000C23098 /* ViewControllers */,
 			);
 			path = ChoresForCoinsProject;
+			sourceTree = "<group>";
+		};
+		65E574FC20D087E000C23098 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65E574EA20CED77000C23098 /* ViewController.swift */,
+				65E5750620D0AFB600C23098 /* ProtectedViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		65E574FE20D0880700C23098 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65E5750020D08AD600C23098 /* AppDelegate+GoogleSignIn.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		65E574FF20D0881400C23098 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				65E5750420D08CCA00C23098 /* MyFirebaseClass.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +136,7 @@
 				65E574E220CED77000C23098 /* Frameworks */,
 				65E574E320CED77000C23098 /* Resources */,
 				7F067F68165522B1543876F1 /* [CP] Embed Pods Frameworks */,
+				C73D1DC9D5C520C2CC992222 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +202,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -175,6 +214,11 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -183,6 +227,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C73D1DC9D5C520C2CC992222 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChoresForCoinsProject/Pods-ChoresForCoinsProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D683F4B169CDC9CE535943FA /* [CP] Check Pods Manifest.lock */ = {
@@ -210,7 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E5750120D08AD600C23098 /* AppDelegate+GoogleSignIn.swift in Sources */,
+				65E5750520D08CCA00C23098 /* MyFirebaseClass.swift in Sources */,
 				65E574EB20CED77000C23098 /* ViewController.swift in Sources */,
+				65E5750720D0AFB600C23098 /* ProtectedViewController.swift in Sources */,
 				65E574E920CED77000C23098 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
