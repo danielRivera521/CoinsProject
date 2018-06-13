@@ -34,6 +34,7 @@ extension AppDelegate: GIDSignInDelegate {
                 appDelegate?.window??.rootViewController = protectedPage
             }
         }
+        
     }
     
     

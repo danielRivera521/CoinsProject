@@ -31,19 +31,5 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().uiDelegate = self as! GIDSignInUIDelegate
     }
     
-    
-    
-    @IBAction func loginGoogleBtn(_ sender: UIButton) {
-    }
-    
-    @IBAction func loginFacebookBtn(_ sender: UIButton) {
-    }
-    
-    @IBAction func loginEmailBtn(_ sender: UIButton) {
-    }
-    
-
-    @IBAction func skipBtn(_ sender: UIButton) {
-    }
 }
 

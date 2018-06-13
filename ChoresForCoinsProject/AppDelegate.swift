@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         return googleAuthentication || facebookAuthentication
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
