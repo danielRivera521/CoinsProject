@@ -18,6 +18,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
     
     @IBOutlet weak var facebookLogin: FBSDKLoginButton!
     
+    
+    var currentUser: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,7 +29,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
         facebookLogin.delegate = self
         facebookLogin.readPermissions = ["email"]
         
-        //creates google signin button
         
     }
 //
@@ -52,8 +54,14 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
             Auth.auth().signInAndRetrieveData(with: credential) { (user, error) in
                 if (error != nil) {
                     print("Facebook authentication failed")
+                    print("\(error?.localizedDescription ?? "Facebook Error")")
+                
+                    let loginManager = FBSDKLoginManager()
+                    loginManager.logOut()
+                    
                 } else {
                     print("Facebook authentication succeed")
+                    self.fetchProfile()
                 }
             }
         } else {
