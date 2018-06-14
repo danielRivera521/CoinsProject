@@ -15,21 +15,31 @@ class ProtectedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
+   
     
-    
-    @IBAction func signOut(_ sender: Any) {
-        
-        do {
-            try Auth.auth().signOut()
-            
-            let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-            let appDelegate = UIApplication.shared.delegate
-            appDelegate?.window??.rootViewController = signInPage
-            
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        if let googleUserName = GIDSignIn.sharedInstance().currentUser.profile.name{
+            print (googleUserName)
         }
+        
+        
+        
+        
+    
     }
+    
+    
+//    @IBAction func signOut(_ sender: Any) {
+//
+//        do {
+//            try Auth.auth().signOut()
+//
+//            let signInPage = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//            let appDelegate = UIApplication.shared.delegate
+//            appDelegate?.window??.rootViewController = signInPage
+//
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
+//    }
 
 }
