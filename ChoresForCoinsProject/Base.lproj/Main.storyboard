@@ -608,6 +608,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qa4-5y-mdj" userLabel="LogoView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="300"/>
                                 <subviews>
@@ -694,6 +695,7 @@
                                     <constraint firstAttribute="trailing" secondItem="yN5-6b-6j7" secondAttribute="trailing" multiplier="1.1" id="uLn-aX-uQA"/>
                                 </constraints>
                             </view>
+
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -716,6 +718,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wUG-f0-Z0u"/>
                     </view>
+                    <connections>
+                        <outlet property="facebookLogin" destination="dGK-YH-XWN" id="17e-SG-6GV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2o-0w-M2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1074,7 +1079,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Evk-yk-YdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+
             <point key="canvasLocation" x="1220" y="-1222.0389805097452"/>
+
         </scene>
         <!--View Controller-->
         <scene sceneID="OWG-0K-wnY">
@@ -1084,6 +1091,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rv-C9-vng" userLabel="CalcTopBarView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="46.5"/>
                                 <subviews>
