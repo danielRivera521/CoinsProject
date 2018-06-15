@@ -56,6 +56,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDel
                     print("Facebook authentication failed")
                     print("\(error?.localizedDescription ?? "Facebook Error")")
                 
+                    //log out of facebook due to error
                     let loginManager = FBSDKLoginManager()
                     loginManager.logOut()
                     
